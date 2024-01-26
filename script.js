@@ -23,3 +23,25 @@ function countdown() {
   const countdownInterval = setInterval(updateCountdown, 1000);
 }
 countdown();
+
+
+
+// Adjust video opacity on load to prevent flash
+document.getElementById('video-background').addEventListener('loadeddata', function() {
+  this.style.opacity = '1';
+});
+
+
+document.getElementById("touristForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const username = document.getElementById("username").value;
+  const phoneNumber = document.getElementById("phoneNumber").value;
+  // You can perform additional validation here if needed
+  
+  // Example: Send data to server or perform other actions
+  console.log("Username:", username);
+  console.log("Phone Number:", phoneNumber);
+  
+  // Optional: Clear the form after submission
+  document.getElementById("touristForm").reset();
+});

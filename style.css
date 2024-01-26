@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&family=Quicksand:wght@300;400;600;700&family=Roboto:ital,wght@0,400;0,700;0,900;1,300;1,500;1,700;1,900&display=swap');
-
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
 #myVideo {
     position: absolute;
     right: 0;
@@ -159,10 +163,9 @@ padding-bottom: 20px;
   }
 
 .allData{
-    background: linear-gradient(to right, #FF512F,#000000f1); 
+    /* background: #0381ff;  */
     background-size: 400% 400%;
   animation: gradientMove 15s infinite;
-
 }
 @keyframes gradientMove {
     0% {
@@ -271,7 +274,101 @@ padding-bottom: 20px;
     height: 350px;
     box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.349);
 }
+.footer {
+    /* background-color: #1E90FF; Dodger Blue */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    animation: slideInUp 0.5s ease forwards;
+  }
 
+@keyframes slideInUp {
+from {
+    transform: translateY(100%);
+}
+to {
+    transform: translateY(0);
+}
+}
+
+.footer-content {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.footer-content img {
+width: 40px;
+height: 40px;
+margin-right: 10px;
+}
+
+.footer-content p {
+margin: 0;
+font-size: 16px;
+}
+
+.contact-info {
+margin-top: 10px;
+}
+
+.contact-info p {
+margin: 5px;
+font-size: 14px;
+}
+
+.contact-info p strong {
+font-weight: bold;
+}
+#video-background {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+background-size: cover;
+transition: 1s opacity;
+}
+
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    /* background-color: #f9f9f9; */
+}
+form input{
+    outline: none;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
 @media only screen and (max-width: 440px) {
     .navbar img{
         height: 60px;
